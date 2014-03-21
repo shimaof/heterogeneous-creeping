@@ -70,12 +70,12 @@ switch test
     case 1  % overtaking
 
      U(1,1:ceil(1*N/50)) = 0.00000000;
-     U(1,ceil(1*N/50)+1:ceil(10*N/50)) = 0.7;
-     U(1,ceil(10*N/50)+1:N) = 0;
+     U(1,ceil(1*N/50)+1:ceil(8*N/50)) = 0.8;
+     U(1,ceil(8*N/50)+1:N) = 0;
 
-     U(2,1:ceil(10*N/50)) = eps;
-     U(2,ceil(10*N/50)+1:ceil(19*N/50)) = 0.7;
-     U(2,ceil(19*N/50)+1:N) = eps;
+     U(2,1:ceil(8*N/50)) = eps;
+     U(2,ceil(8*N/50)+1:ceil(15*N/50)) = 0.8;
+     U(2,ceil(15*N/50)+1:N) = eps;
      
      d1l = U(1,1)+0*t;
      d2l = U(2,1)+0*t;
@@ -86,11 +86,11 @@ switch test
      
     case 2 % creeping
       U(1,1:ceil(1*N/50)) = 0;
-      U(1,ceil(1*N/50)+1:ceil(15*N/50)) = .65;
+      U(1,ceil(1*N/50)+1:ceil(15*N/50)) = .7;
       U(1,ceil(15*N/50)+1:N) = 0;
 
       U(2,1:ceil(15*N/50)) = eps;
-      U(2,ceil(15*N/50)+1:N) = 0.65;
+      U(2,ceil(15*N/50)+1:N) = 0.7;
      
       d1l = U(1,1)+0*t;
       d2l = U(2,1)+0*t;
